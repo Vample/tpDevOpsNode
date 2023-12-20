@@ -5,7 +5,3 @@ function submitName(){
     document.getElementById('message').innerText = message;
     console.log(message)
 }
-
-function test(){
-    document.getElementById('message').innerText = 'la function test';
-}
