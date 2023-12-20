@@ -4,8 +4,8 @@ function obtenirNom(nom){
     
 }
 
-function retournerMessage(){
+function retournerMessage(name){
     return 'Bonjour ' + name + ', ... Vous êtes bien matinal ...';
 }
 
-export {retournerMessage};
+export default {retournerMessage};
