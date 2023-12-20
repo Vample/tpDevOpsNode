@@ -1,18 +1,19 @@
 import express from 'express';
-import retournerMessage from './back-bonjour.js';
+import back from './back-bonjour.js';
+
+const apiRouter = express.Router();
 
 apiRouter.route('/')
     .get(function (req, res, next) {
-        var name = req.params.name;
+        var nom = req.params.name;
         res.setHeader('Content-Type', 'application/json');
-        res.send(name);
+        res.send(nom);
     });
 
-apiRouter.route('/calcul')
+apiRouter.route('/')
     .post(function (req, res, next) {
-        var name = req.body;
-        retournerMessage(name);
-
+        var name = req.body.name;
+        let retour = back.retournerMessage(name);
         res.send(retour);
     });
 
